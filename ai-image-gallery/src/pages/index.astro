@@ -1,0 +1,33 @@
+---
+import Navbar from "../components/Navbar.tsx";
+import SearchImages from "../components/SearchImages.tsx";
+---
+
+<html lang="en">
+  <head>
+    <title>Search Images</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        background: #fffdf6;
+      }
+
+      h2 {
+        margin-bottom: 1.5rem;
+        color: #444;
+      }
+
+      .page-content {
+        padding-top: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <Navbar client:load />
+    <main class="page-content">
+      <SearchImages client:load />
+    </main>
+  </body>
+</html>

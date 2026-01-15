@@ -1,0 +1,18 @@
+---
+import Navbar from "../components/Navbar.tsx";
+import UploadImage from "../components/UploadImage.tsx";
+---
+
+<html lang="en">
+  <head>
+    <title>Upload Image</title>
+  </head>
+  <body style="font-family: sans-serif; margin: 0;">
+    <Navbar client:load />
+
+    <!-- Add top padding equal to navbar height -->
+    <main style="padding-top: 2rem; text-align: center;">
+      <UploadImage client:load />
+    </main>
+  </body>
+</html>
