@@ -8,10 +8,10 @@ by understanding the visual content of an image. Using a combination of Computer
 - **Natural Language Prompts:** Finding images via text descriptions.
 - **Image-to-Image Similarity:** Uploading a reference photo to find visually similar matches.
 
-## Technical Stack
-- **Model:** CLIP (Contrastive Language-Image Pre-training) for cross-modal embedding generation.
-- **Vector Engine:** FAISS (Facebook AI Similarity Search) for high-speed nearest neighbor retrieval.
-- **Backend:** FastAPI and PyTorch optimized for low-latency inference.
+## Technical Implementation
+- **Inference Engine:** Built on **PyTorch**, utilizing `@torch.inference_mode()` to minimize memory overhead and maximize throughput during embedding generation.
+- **Hardware Acceleration:** Supports **CUDA** for GPU-accelerated tensor computations, significantly reducing latency for real-time search.
+- **Vector Normalization:** Implements **L2 Normalization** on the CLIP output (unit hypersphere mapping). This ensures that FAISS similarity scores are based purely on semantic direction (Cosine Similarity) rather than vector magnitude.
 
 ## Key Features
 - **Multimodal Alignment:** Maps text and images into a shared vector space, enabling text-based visual search without manual tagging.
